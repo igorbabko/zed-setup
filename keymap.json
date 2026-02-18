@@ -1,0 +1,56 @@
+[
+  {
+    "context": "vim_mode == normal || vim_mode == visual",
+    "bindings": {
+      "j": "vim::Left",
+      "k": "vim::Down",
+      "l": "vim::Up",
+      ";": "vim::Right",
+    },
+  },
+  {
+    "context": "!Editor",
+    "bindings": {
+      "l": "menu::SelectPrevious",
+      "k": "menu::SelectNext",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "'": "vim::RepeatFind",
+      "U": "editor::Redo",
+      "g n": "editor::SelectAllMatches",
+      "space f": "editor::Format",
+      "space i": "editor::OrganizeImports",
+      "space j": "editor::GoToDiagnostic",
+      "space '": "editor::GoToPreviousDiagnostic",
+      "space p": "command_palette::Toggle",
+      "space ;": "workspace::ToggleRightDock",
+      "space c l": "workspace::ToggleCenteredLayout",
+      "space e": "project_panel::ToggleFocus",
+      "space \\": "project_panel::CollapseAllEntries",
+      "space o": "outline::Toggle",
+      "space w": "pane::CloseActiveItem",
+      "space q a": "pane::CloseAllItems",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-j": "editor::DuplicateLineDown",
+      "cmd-[": "editor::Fold",
+      "cmd-]": "editor::UnfoldLines",
+      "cmd-alt-[": "editor::FoldAll",
+      "cmd-alt-]": "editor::UnfoldAll",
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-s": "zed::OpenSettingsFile",
+      "alt-k": "zed::OpenKeymapFile",
+      "cmd-\\": "workspace::ActivatePreviousPane",
+    },
+  },
+]
